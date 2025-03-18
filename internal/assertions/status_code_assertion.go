@@ -13,7 +13,7 @@ type StatusCodeAssertion struct {
 
 func (a *StatusCodeAssertion) Run(response *http.Response, logger *logger.Logger) error {
 	if response.StatusCode != a.ExpectedStatusCode {
-		return fmt.Errorf("expected status code %d, got %d", a.ExpectedStatusCode, response.StatusCode)
+		return fmt.Errorf("Expected status code %d, got %d", a.ExpectedStatusCode, response.StatusCode)
 	}
 
 	logger.Successf("✓ Received status code %d", a.ExpectedStatusCode)

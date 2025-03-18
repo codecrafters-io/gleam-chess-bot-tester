@@ -43,7 +43,7 @@ func (tc *SendRequestTestCase) Run(harness *test_case_harness.TestCaseHarness, l
 	if tc.Assertion != nil {
 		for _, assertion := range tc.Assertion {
 			if err := assertion.Run(response, logger); err != nil {
-				return fmt.Errorf("assertion failed: %v", err)
+				return fmt.Errorf("Assertion failed: %v", err)
 			}
 		}
 	}

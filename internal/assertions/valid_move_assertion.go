@@ -16,12 +16,12 @@ type ValidMoveAssertion struct {
 func (a *ValidMoveAssertion) Run(response *http.Response, logger *logger.Logger) error {
 	body, err := io.ReadAll(response.Body)
 	if err != nil {
-		return fmt.Errorf("failed to read response body: %v", err)
+		return fmt.Errorf("Failed to read response body: %v", err)
 	}
 
 	move := string(body)
 	if !moveIsValid(a.FEN, move) {
-		return fmt.Errorf("invalid move %s", move)
+		return fmt.Errorf("Invalid move received: %s", move)
 	}
 	logger.Successf("✓ Received valid move %s", move)
 
