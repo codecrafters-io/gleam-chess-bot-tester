@@ -1,6 +1,8 @@
 package internal
 
 import (
+	"time"
+
 	"github.com/codecrafters-io/tester-utils/tester_definition"
 )
 
@@ -23,10 +25,12 @@ var testerDefinition = tester_definition.TesterDefinition{
 		{
 			Slug:     "a04",
 			TestFunc: test4,
+			Timeout:  30 * time.Second,
 		},
 		{
 			Slug:     "a05",
 			TestFunc: test5,
+			Timeout:  2 * time.Minute,
 		},
 	},
 }
