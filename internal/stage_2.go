@@ -18,14 +18,15 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 
 	logger := stageHarness.Logger
 
-	request, err := http.NewRequest("POST", test_cases.ADDRESS, bytes.NewBuffer([]byte(`{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "turn": "white", "failed_moves": []}`)))
+	FEN := "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+	request, err := http.NewRequest("POST", test_cases.ADDRESS, bytes.NewBuffer([]byte(`{"fen": "`+FEN+`", "turn": "white", "failed_moves": []}`)))
 	if err != nil {
 		return err
 	}
 
 	test_case := test_cases.SendRequestTestCase{
 		Request:   request,
-		Assertion: []assertions.Assertion{&assertions.StatusCodeAssertion{ExpectedStatusCode: 200}, &assertions.ResponseBodyAssertion{ExpectedBody: "expected response here"}},
+		Assertion: []assertions.Assertion{&assertions.StatusCodeAssertion{ExpectedStatusCode: 200}, &assertions.ValidMoveAssertion{FEN: FEN}},
 	}
 
 	return test_case.Run(stageHarness, logger)
