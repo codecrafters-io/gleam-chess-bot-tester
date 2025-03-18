@@ -1,6 +1,7 @@
 package internal
 
 import (
+	"bytes"
 	"net/http"
 
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/assertions"
@@ -17,7 +18,7 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 
 	logger := stageHarness.Logger
 
-	request, err := http.NewRequest("GET", test_cases.ADDRESS, nil)
+	request, err := http.NewRequest("POST", test_cases.ADDRESS, bytes.NewBuffer([]byte(`{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "turn": "white", "failed_moves": []}`)))
 	if err != nil {
 		return err
 	}
