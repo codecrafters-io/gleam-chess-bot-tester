@@ -24,10 +24,10 @@ func getTurn(fenStr string) string {
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) error {
 	stageHarness.Logger.Debugf("=== RUN Generate Chess Move for Position: %s", tc.FEN)
-	requestBody := map[string]interface{}{
+	requestBody := map[string]any{
 		"fen":          tc.FEN,
 		"turn":         getTurn(tc.FEN),
-		"failed_moves": []string{}, // Previous invalid moves for this position
+		"failed_moves": []string{},
 	}
 	jsonBody, err := json.Marshal(requestBody)
 	if err != nil {
