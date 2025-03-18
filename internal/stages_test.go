@@ -8,11 +8,18 @@ import (
 
 func TestStages(t *testing.T) {
 	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
-		"literal_character": {
+		"success": {
 			UntilStageSlug:      "a05",
 			CodePath:            "./test_helpers/scenarios/test_bot",
 			ExpectedExitCode:    0,
-			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/a05",
+			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
+		"invalid_move": {
+			UntilStageSlug:      "a05",
+			CodePath:            "./test_helpers/scenarios/failure_bot",
+			ExpectedExitCode:    1,
+			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/failure",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 	}
