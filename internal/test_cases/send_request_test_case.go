@@ -10,10 +10,11 @@ import (
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
 )
 
+const PROTOCOL = "http"
 const HOST = "localhost"
 const PORT = "8000"
 const ENDPOINT = "/move"
-const ADDRESS = HOST + ":" + PORT + ENDPOINT
+const ADDRESS = PROTOCOL + "://" + HOST + ":" + PORT + ENDPOINT
 
 type SendRequestTestCase struct {
 	Request   *http.Request
@@ -25,6 +26,10 @@ func (tc *SendRequestTestCase) Run(harness *test_case_harness.TestCaseHarness, l
 	client := &http.Client{
 		Timeout: 5 * time.Second,
 	}
+
+	// sleep for 1 second
+	// TODO: Remove this once we've confirmed that the server is running
+	time.Sleep(1 * time.Second)
 
 	// Make the request
 	logger.Debugf("Making HTTP request to %s", tc.Request.URL)
