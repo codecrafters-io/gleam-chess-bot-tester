@@ -2,7 +2,10 @@ module github.com/codecrafters-io/gleam-chess-bot-tester
 
 go 1.24
 
-require github.com/codecrafters-io/tester-utils v0.2.41
+require (
+	github.com/codecrafters-io/tester-utils v0.2.41
+	github.com/corentings/chess v0.0.0-20241113092200-3f44c4e3e959
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
