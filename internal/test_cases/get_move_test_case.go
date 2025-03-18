@@ -2,6 +2,7 @@ package test_cases
 
 import (
 	"bytes"
+	"encoding/json"
 	"net/http"
 	"strings"
 
@@ -22,7 +23,17 @@ func getTurn(fenStr string) string {
 }
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) error {
-	request, err := http.NewRequest("POST", ADDRESS, bytes.NewBuffer([]byte(`{"fen": "`+tc.FEN+`", "turn": "`+getTurn(tc.FEN)+`", "failed_moves": []}`)))
+	stageHarness.Logger.Debugf("=== RUN Generate Chess Move for Position: %s", tc.FEN)
+	requestBody := map[string]interface{}{
+		"fen":          tc.FEN,
+		"turn":         getTurn(tc.FEN),
+		"failed_moves": []string{}, // Previous invalid moves for this position
+	}
+	jsonBody, err := json.Marshal(requestBody)
+	if err != nil {
+		return err
+	}
+	request, err := http.NewRequest("POST", ADDRESS, bytes.NewBuffer(jsonBody))
 	if err != nil {
 		return err
 	}
