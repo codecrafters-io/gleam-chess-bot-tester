@@ -9,10 +9,10 @@ import (
 func TestStages(t *testing.T) {
 	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
 		"literal_character": {
-			UntilStageSlug:      "init",
-			CodePath:            "./test_helpers/scenarios/init/failure",
-			ExpectedExitCode:    1,
-			StdoutFixturePath:   "./test_helpers/fixtures/init/failure",
+			UntilStageSlug:      "a05",
+			CodePath:            "./test_helpers/scenarios/test_bot",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/a05",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 	}
