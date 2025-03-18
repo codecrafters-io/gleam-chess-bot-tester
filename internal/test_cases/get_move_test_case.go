@@ -23,7 +23,6 @@ func getTurn(fenStr string) string {
 }
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) error {
-	stageHarness.Logger.Debugf("=== RUN Generate Chess Move for Position: %s", tc.FEN)
 	requestBody := map[string]any{
 		"fen":          tc.FEN,
 		"turn":         getTurn(tc.FEN),
