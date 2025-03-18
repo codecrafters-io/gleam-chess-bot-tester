@@ -3,10 +3,10 @@ package test_cases
 import (
 	"bytes"
 	"net/http"
+	"strings"
 
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/assertions"
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
-	"github.com/corentings/chess"
 )
 
 type GetMoveTestCase struct {
@@ -14,14 +14,11 @@ type GetMoveTestCase struct {
 	AssertGeneratedMoveIsValid bool
 }
 
+// For invalid FENs, we still need to parse the turn
+// Parsing FENs is a no go for those test cases
 func getTurn(fenStr string) string {
-	fen, err := chess.FEN(fenStr)
-	if err != nil {
-		panic("Failed to parse FEN: " + err.Error())
-	}
-
-	game := chess.NewGame(fen)
-	return game.Position().Turn().String()
+	parts := strings.Split(fenStr, " ")
+	return strings.TrimSpace(parts[1])
 }
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) error {
