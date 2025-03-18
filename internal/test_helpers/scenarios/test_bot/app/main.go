@@ -2,14 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
+
+	"github.com/corentings/chess"
 )
 
 func main() {
-	fmt.Println("Starting server...")
-
-	// Create server with no recovery
 	server := &http.Server{
 		Addr: ":8000",
 		Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -17,21 +15,29 @@ func main() {
 				return
 			}
 
-			fmt.Println("Received request to /move")
+			// fmt.Println("Received request to /move")
 			request := map[string]any{}
 			if err := json.NewDecoder(r.Body).Decode(&request); err != nil {
-				fmt.Printf("Error decoding request: %v\n", err)
 				http.Error(w, err.Error(), http.StatusBadRequest)
 				return
 			}
-			fmt.Printf("Decoded request: %+v\n", request["fen"])
+
+			fen, err := chess.FEN(request["fen"].(string))
+			if err != nil {
+				http.Error(w, err.Error(), http.StatusBadRequest)
+				return
+			}
+
+			game := chess.NewGame(fen)
+			moves := game.ValidMoves()
+
 			w.WriteHeader(http.StatusOK)
-			w.Write([]byte("e2e4"))
+			w.Write([]byte(moves[0].String()))
 		}),
 	}
 
 	err := server.ListenAndServe()
 	if err != nil {
-		fmt.Printf("Server error: %v\n", err)
+		return
 	}
 }
