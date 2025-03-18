@@ -1,2 +1,3 @@
 #!/bin/sh
-exit 0
+cd $(dirname $0)
+exec go run app/main.go "$@"
