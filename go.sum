@@ -1,3 +1,5 @@
+github.com/BurntSushi/toml v1.5.0 h1:W5quZX/G/csjUnuI8SUYlsHs9M38FC7znL0lIO+DvMg=
+github.com/BurntSushi/toml v1.5.0/go.mod h1:ukJfTF/6rtPPRCnwkur4qwRxa8vTRFBF0uk2lLoLwho=
 github.com/codecrafters-io/tester-utils v0.2.41 h1:WHHCPLS4DFDHkYqrDHzSozsGjbp6H3LXpGgwUKv4DG0=
 github.com/codecrafters-io/tester-utils v0.2.41/go.mod h1:VgP0WmmRsA8L1urWGMXPW4Zv5jcwHwR0LdKZ8ZAEFT4=
 github.com/corentings/chess v0.0.0-20241113092200-3f44c4e3e959 h1:B5Fq6d2MB3li9PXDkm3hR7iMOCgJS6m+igsjtGe2iHA=
