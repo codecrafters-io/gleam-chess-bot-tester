@@ -5,7 +5,6 @@ import (
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/test_cases"
 	"github.com/codecrafters-io/tester-utils/random"
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
-	"github.com/corentings/chess"
 )
 
 func test5(stageHarness *test_case_harness.TestCaseHarness) error {
@@ -75,13 +74,11 @@ func test5(stageHarness *test_case_harness.TestCaseHarness) error {
 		"r1bqk2r/pppp1ppp/5n2/2b1n3/4P3/1BP3Q1/PP3PPP/RNB1K1NR b KQkq - 0 1",
 		"r3q1kr/ppp5/3p2pQ/8/3PP1b1/5R2/PPP3P1/5RK1 w - - 0 1",
 		"8/8/2R5/1p2qp1k/1P2r3/2PQ2P1/5K2/8 w - - 0 1",
-		"r1b2rk1/2p1qnbp/p1pp2p1/5p2/2PQP3/1PN2N1P/PB3PP1/3D1RK1 w - - 0 1",
 		"rn1qr1k1/1p2np2/2p3p1/8/1pPb4/7Q/PB1P1PP1/2KR1B1R w - - 0 1",
 		"3qrbk1/ppp1r2n/3pP2p/3P4/2P4P/1P3Q2/PB6/R4R1K w - - 0 1",
 		"6r1/3Pn1qk/p1p1P1rp/2Q2p2/2P5/1P4P1/P3R2P/5RK1 b - - 0 1",
 		"r1brnbk1/ppq2pp1/4p2p/4N3/3P4/P1PB1Q2/3B1PPP/R3R1K1 w - - 0 1",
 		"8/6pp/3q1p2/3n1k2/1P6/3NQ2P/5PP1/6K1 w - - 0 1",
-		"1r1r1qk1/p2n1p1p/bp1Pn1pQ/2pNp3/2P2P1N/1P5B/P6P/3D1RK1 w - - 0 1",
 		"1k1r2r1/ppq5/1bp4p/3pQ3/8/2P2N2/PP4P1/R4R1K b - - 0 1",
 		"3r2k1/p2q4/1p4p1/3rRp1p/5P1P/6PK/P3R3/3Q4 w - - 0 1",
 		"6k1/5ppp/1q6/2b5/8/2R1pPP1/1P2Q2P/7K w - - 0 1",
@@ -149,9 +146,7 @@ func test5(stageHarness *test_case_harness.TestCaseHarness) error {
 		"6k1/1pp3q1/5r2/1PPp4/3P1pP1/3Qn2P/3B4/4R1K1 b - - 0 1",
 		"2rq1bk1/p4p1p/1p4p1/3b4/3B1Q2/8/P4PpP/3RR1K1 w - - 0 1",
 		"4r1k1/5bpp/2p5/3pr3/8/1B3pPq/PPR2P2/2R2QK1 b - - 0 1",
-		"r1b1k2r/1pp1q2p/p1n3p1/3QPp2/8/1BP3B1/P5PP/3D1RK1 w kq - 0 1",
 		"3r2k1/p6p/2Q3p1/4q3/2P1p3/P3Pb2/1P3P1P/2K2BR1 b - - 0 1",
-		"3r1r1k/N2qn1pp/1p2np2/2p5/2Q1P2N/3P4/PP4PP/3D1RK1 b - - 0 1",
 		"6kr/1q2r1p1/1p2N1Q1/5p2/1P1p4/6R1/7P/2R3K1 w - - 0 1",
 		"3b1rk1/1bq3pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R2R2K1 w - - 0 1",
 		"r1bq3r/ppppR1p1/5n1k/3P4/6pP/3Q4/PP1N1PP1/5K1R w - - 0 1",
@@ -185,18 +180,13 @@ func test5(stageHarness *test_case_harness.TestCaseHarness) error {
 		}
 		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, len(FENs), FEN)
 
-		test_case := test_cases.GetMoveTestCase{
+		testCase := test_cases.GetMoveTestCase{
 			FEN:                        FEN,
 			AssertGeneratedMoveIsValid: true,
 		}
-		if err := test_case.Run(stageHarness); err != nil {
+		if err := testCase.Run(stageHarness); err != nil {
 			return err
 		}
 	}
 	return nil
-}
-
-func checkFEN(FEN string) bool {
-	_, err := chess.FEN(FEN)
-	return err == nil
 }
