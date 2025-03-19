@@ -2,154 +2,33 @@ Debug = true
 
 [33m[stage-5] [0m[94mRunning tests for Stage #5: a05[0m
 [33m[stage-5] [0m[94m$ ./script.sh[0m
-[33m[stage-5] [0m[94m1/160 RUN Generate Chess Move for Position: r6k/p1Q4p/2p1b1rq/4p3/B3P3/4P3/PPP3P1/4RRK1 b - - 0 1[0m
+[33m[stage-5] [0m[94m1/156 RUN Generate Chess Move for Position: R7/P4k2/8/8/8/8/r7/6K1 w - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-5] [0m[36mRequest completed in 9.750833ms[0m
+[33m[stage-5] [0m[92m✓ Received status code 200[0m
+[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
+[33m[stage-5] [0m[92mRequest completed successfully[0m
+[33m[stage-5] [0m[94m2/156 RUN Generate Chess Move for Position: 1r3b1k/p4rpp/4pp2/3q4/2ppbPPQ/6RK/PP5P/2B1NR2 b - - 0 1[0m
+[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-5] [0m[36mRequest completed in 2.377333ms[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
 [33m[stage-5] [0m[92m✓ Received valid move h8g8[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m2/160 RUN Generate Chess Move for Position: r1b1k1nr/pp3pQp/4pq2/3pn3/8/P1P5/2P2PPP/R1B1KBNR w KQkq - 0 1[0m
+[33m[stage-5] [0m[94m3/156 RUN Generate Chess Move for Position: r1bq4/1p4kp/3p1n2/p4pB1/2pQ4/8/1P4PP/4RRK1 w - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move e1d1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m3/160 RUN Generate Chess Move for Position: 1R6/1brk2p1/4p2p/p1P1Pp2/P7/6P1/1P4P1/2R3K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m4/160 RUN Generate Chess Move for Position: r4q1k/p2bR1rp/2p2Q1N/5p2/5p2/2P5/PP3PPP/R5K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m5/160 RUN Generate Chess Move for Position: 1r1r2k1/4pp1p/2p1b1p1/p3R3/RqBP4/4P3/1PQ2PPP/6K1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8g7[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m6/160 RUN Generate Chess Move for Position: 2rr3k/pp3pp1/1nnqbN1p/3pN3/2pP4/2P3Q1/PPB4P/R4RK1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-5] [0m[36mRequest completed in 1.738917ms[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
 [33m[stage-5] [0m[92m✓ Received valid move g1h1[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m7/160 RUN Generate Chess Move for Position: 8/p7/1ppk1n2/5ppp/P1PP4/2P1K1P1/5N1P/8 b - - 0 1[0m
+[33m[stage-5] [0m[94m4/156 RUN Generate Chess Move for Position: 2kr3r/pppq1ppp/3p1n2/bQ2p3/1n1PP3/1PN1BN1P/1PP2PP1/2KR3R b - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-5] [0m[36mRequest completed in 6.505666ms[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move d6e6[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m8/160 RUN Generate Chess Move for Position: 6k1/5ppp/1q6/2b5/8/2R1pPP1/1P2Q2P/7K w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h1g1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m9/160 RUN Generate Chess Move for Position: r1bq2rk/pp3pbp/2p1p1pQ/7P/3P4/2PB1N2/PP3PPR/2KR4 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move c1b1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m10/160 RUN Generate Chess Move for Position: r3q1kr/ppp5/3p2pQ/8/3PP1b1/5R2/PPP3P1/5RK1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1h1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m11/160 RUN Generate Chess Move for Position: r2r2k1/pb3ppp/1p1bp3/7q/3n2nP/PP1B2P1/1B1N1P2/RQ2NRK1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8f8[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m12/160 RUN Generate Chess Move for Position: r4rk1/p1B1bpp1/1p2pn1p/8/2PP4/3B1P2/qP2QP1P/3R1RK1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1h1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m13/160 RUN Generate Chess Move for Position: r2r2k1/ppqbppbp/2n2np1/2pp4/6P1/1P1PPNNP/PBP2PB1/R2QK2R b KQ - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8f8[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m14/160 RUN Generate Chess Move for Position: r2q3k/p2P3p/1p3p2/3QP1r1/8/B7/P5PP/2R3K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m15/160 RUN Generate Chess Move for Position: 6k1/5p2/p5np/4B3/3P4/1PP1q3/P3r1QP/6RK w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g2f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m16/160 RUN Generate Chess Move for Position: 1r3r2/4q1kp/b1pp2p1/5p2/pPn1N3/6P1/P3PPBP/2QRR1K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m17/160 RUN Generate Chess Move for Position: 6rk/1pp2Qrp/3p1B2/1pb1p2R/3n1q2/3P4/PPP3PP/R6K w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h1g1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m18/160 RUN Generate Chess Move for Position: r3nrk1/2p2p1p/p1p1b1p1/2NpPq2/3R4/P1N1Q3/1PP2PPP/4R1K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m19/160 RUN Generate Chess Move for Position: 6r1/3Pn1qk/p1p1P1rp/2Q2p2/2P5/1P4P1/P3R2P/5RK1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h7h8[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m21/160 RUN Generate Chess Move for Position: 7k/2p1b1pp/8/1p2P3/1P3r2/2P3Q1/1P5P/R4qBK b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h8g8[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m22/160 RUN Generate Chess Move for Position: 3qrbk1/ppp1r2n/3pP2p/3P4/2P4P/1P3Q2/PB6/R4R1K w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h1g1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m23/160 RUN Generate Chess Move for Position: 8/3b2kp/4p1p1/pr1n4/N1N4P/1P4P1/1K3P2/3R4 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move b2a1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m24/160 RUN Generate Chess Move for Position: 3r2k1/1p1b1pp1/pq5p/8/3NR3/2PQ3P/PP3PP1/6K1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8h7[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m25/160 RUN Generate Chess Move for Position: r1b2rk1/pp2bppp/2n1pn2/q5B1/2BP4/2N2N2/PP2QPPP/2R2RK1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8h8[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m26/160 RUN Generate Chess Move for Position: 6k1/1b2rp2/1p4p1/3P4/PQ4P1/2N2q2/5P2/3R2K1 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8g7[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m27/160 RUN Generate Chess Move for Position: 7k/p7/1R5K/6r1/6p1/6P1/8/8 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h6g5[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m28/160 RUN Generate Chess Move for Position: 6k1/6p1/2p4p/4Pp2/4b1qP/2Br4/1P2RQPK/8 b - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g8f7[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m29/160 RUN Generate Chess Move for Position: 2rq1bk1/p4p1p/1p4p1/3b4/3B1Q2/8/P4PpP/3RR1K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move f4c1[0m
-[33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m30/160 RUN Generate Chess Move for Position: 1k5r/pppbn1pp/4q1r1/1P3p2/2NPp3/1QP5/P4PPP/R1B1R1K1 w - - 0 1[0m
-[33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move g1f1[0m
+[33m[stage-5] [0m[92m✓ Received valid move c8b8[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
 [33m[stage-5] [0m[92mTest passed.[0m
 [33m[stage-5] [0m[36mTerminating program[0m
-[33m[stage-5] [0m[36mError terminating program: 'execution timed out'[0m
+[33m[stage-5] [0m[36mProgram terminated successfully[0m
 
 [33m[stage-4] [0m[94mRunning tests for Stage #4: a04[0m
 [33m[stage-4] [0m[94m$ ./script.sh[0m
@@ -160,6 +39,7 @@ Debug = true
 [33m[stage-3] [0m[94mRunning tests for Stage #3: a03[0m
 [33m[stage-3] [0m[94m$ ./script.sh[0m
 [33m[stage-3] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-3] [0m[36mRequest completed in 2.285542ms[0m
 [33m[stage-3] [0m[92m✓ Received status code 200[0m
 [33m[stage-3] [0m[92m✓ Received valid move b1a3[0m
 [33m[stage-3] [0m[92mRequest completed successfully[0m
@@ -170,6 +50,7 @@ Debug = true
 [33m[stage-2] [0m[94mRunning tests for Stage #2: a02[0m
 [33m[stage-2] [0m[94m$ ./script.sh[0m
 [33m[stage-2] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
+[33m[stage-2] [0m[36mRequest completed in 3.888708ms[0m
 [33m[stage-2] [0m[92m✓ Received status code 200[0m
 [33m[stage-2] [0m[92mRequest completed successfully[0m
 [33m[stage-2] [0m[92mTest passed.[0m
