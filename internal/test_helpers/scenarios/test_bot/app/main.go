@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"log"
 	"net/http"
 	"os"
@@ -18,6 +19,7 @@ func main() {
 		Addr: ":8000",
 		Handler: http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			if r.URL.Path != "/move" {
+				http.Error(w, "Invalid path", http.StatusBadRequest)
 				return
 			}
 
@@ -28,10 +30,17 @@ func main() {
 				return
 			}
 
-			fen, err := chess.FEN(request["fen"].(string))
+			var fen func(*chess.Game)
+			var err error
+			fenStr := request["fen"].(string)
+			fen, err = chess.FEN(fenStr)
 			if err != nil {
-				http.Error(w, err.Error(), http.StatusBadRequest)
-				return
+				fenStr += " 0 1"
+				fen, err = chess.FEN(fenStr)
+				if err != nil {
+					http.Error(w, err.Error(), http.StatusBadRequest)
+					return
+				}
 			}
 
 			game := chess.NewGame(fen)
@@ -51,7 +60,7 @@ func main() {
 
 	// Run server in a goroutine
 	go func() {
-		if err := server.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+		if err := server.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 			log.Printf("Error starting server: %v\n", err)
 			os.Exit(1)
 		}
