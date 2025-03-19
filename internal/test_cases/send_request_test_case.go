@@ -7,7 +7,6 @@ import (
 
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/assertions"
 	"github.com/codecrafters-io/tester-utils/logger"
-	"github.com/codecrafters-io/tester-utils/test_case_harness"
 )
 
 const PROTOCOL = "http"
@@ -21,7 +20,7 @@ type SendRequestTestCase struct {
 	Assertion []assertions.Assertion
 }
 
-func (tc *SendRequestTestCase) Run(harness *test_case_harness.TestCaseHarness, logger *logger.Logger) error {
+func (tc *SendRequestTestCase) Run(logger *logger.Logger) error {
 	// Create HTTP client with timeout
 	client := &http.Client{
 		Timeout: 5 * time.Second,

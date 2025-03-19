@@ -16,7 +16,7 @@ type GetMoveTestCase struct {
 }
 
 // For invalid FENs, we still need to parse the turn
-// Parsing FENs is a no go for those test cases
+// Parsing FENs is a no-go for those test cases
 func getTurn(fenStr string) string {
 	parts := strings.Split(fenStr, " ")
 	return strings.TrimSpace(parts[1])
@@ -49,5 +49,5 @@ func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) 
 		Assertion: allAssertions,
 	}
 
-	return test_case.Run(stageHarness, stageHarness.Logger)
+	return test_case.Run(stageHarness.Logger)
 }
