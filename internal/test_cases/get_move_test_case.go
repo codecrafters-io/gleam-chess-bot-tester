@@ -10,6 +10,12 @@ import (
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
 )
 
+const PROTOCOL = "http"
+const HOST = "localhost"
+const PORT = "8000"
+const ENDPOINT = "/move"
+const ADDRESS = PROTOCOL + "://" + HOST + ":" + PORT + ENDPOINT
+
 type GetMoveTestCase struct {
 	FEN                        string
 	AssertGeneratedMoveIsValid bool
