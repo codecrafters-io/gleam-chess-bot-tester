@@ -17,7 +17,7 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 
 	test_case := test_cases.GetMoveTestCase{
 		FEN:                        FEN,
-		AssertGeneratedMoveIsValid: false,
+		AssertGeneratedMoveIsValid: true,
 	}
 	if err := test_case.Run(stageHarness); err != nil {
 		return err

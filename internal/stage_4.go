@@ -13,19 +13,18 @@ func test4(stageHarness *test_case_harness.TestCaseHarness) error {
 		return err
 	}
 
-	POSITIONS := 3
-	positions := random.RandomElementsFromArray(BratkoKopekFENs, POSITIONS)
-	for i, FEN := range positions {
+	positionCounts := 4
+	for i, FEN := range random.RandomElementsFromArray(WinAtChessFENs, positionCounts) {
 		if !checkFEN(FEN) {
 			continue
 		}
-		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, POSITIONS, FEN)
+		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, positionCounts, FEN)
 
-		test_case := test_cases.GetMoveTestCase{
+		testCase := test_cases.GetMoveTestCase{
 			FEN:                        FEN,
 			AssertGeneratedMoveIsValid: true,
 		}
-		if err := test_case.Run(stageHarness); err != nil {
+		if err := testCase.Run(stageHarness); err != nil {
 			return err
 		}
 	}
