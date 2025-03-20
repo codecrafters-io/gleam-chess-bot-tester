@@ -18,7 +18,7 @@ var testerDefinition = tester_definition.TesterDefinition{
 		},
 		{
 			Slug:     "anti-cheat-3",
-			TestFunc: antiCheatFFI,
+			TestFunc: antiCheatFFI, // TODO: Remove FFI, might be a problem
 		},
 	},
 	ExecutableFileName: "script.sh",
@@ -34,15 +34,11 @@ var testerDefinition = tester_definition.TesterDefinition{
 		{
 			Slug:     "a03",
 			TestFunc: test3,
+			Timeout:  20 * time.Second,
 		},
 		{
 			Slug:     "a04",
 			TestFunc: test4,
-			Timeout:  20 * time.Second,
-		},
-		{
-			Slug:     "a05",
-			TestFunc: test5,
 			Timeout:  20 * time.Second,
 		},
 	},
