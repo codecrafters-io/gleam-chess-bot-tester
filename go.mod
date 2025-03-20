@@ -1,6 +1,8 @@
 module github.com/codecrafters-io/gleam-chess-bot-tester
 
-go 1.24
+go 1.23.0
+
+toolchain go1.24.1
 
 require (
 	github.com/codecrafters-io/tester-utils v0.2.41

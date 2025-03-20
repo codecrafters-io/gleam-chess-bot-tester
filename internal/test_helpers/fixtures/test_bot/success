@@ -2,25 +2,25 @@ Debug = true
 
 [33m[stage-5] [0m[94mRunning tests for Stage #5: a05[0m
 [33m[stage-5] [0m[94m$ ./script.sh[0m
-[33m[stage-5] [0m[94m1/4 RUN Generate Chess Move for Position: 5rk1/pp4p1/2n1p2p/2Npq3/2p5/6P1/P3P1BP/R4Q1K w - - 0 1[0m
+[33m[stage-5] [0m[94m1/4 RUN Generate Chess Move for Position: 2r3k1/q4ppp/p3p3/pnNp4/2rP4/2P2P2/4R1PP/2R1Q1K1 b - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h1g1[0m
+[33m[stage-5] [0m[92m✓ Received valid move g8f8[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m2/4 RUN Generate Chess Move for Position: 3rr1k1/pp3pp1/4b3/8/2P1B2R/6QP/P3q1P1/5R1K w - - 0 1[0m
+[33m[stage-5] [0m[94m2/4 RUN Generate Chess Move for Position: r5k1/1q4pp/2p5/p1Q5/2P5/5R2/4RKPP/r7 w - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h1g1[0m
+[33m[stage-5] [0m[92m✓ Received valid move f2e3[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m3/4 RUN Generate Chess Move for Position: 4k1r1/2p3r1/1pR1p3/3pP2p/3P2qP/P4N2/1PQ4P/5R1K b - - 0 1[0m
+[33m[stage-5] [0m[94m3/4 RUN Generate Chess Move for Position: 6k1/6p1/p7/3Pn3/5p2/4rBqP/P4RP1/5QK1 b - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move e8d7[0m
+[33m[stage-5] [0m[92m✓ Received valid move g8f7[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
-[33m[stage-5] [0m[94m4/4 RUN Generate Chess Move for Position: 3r1r1k/1p4pp/p4p2/8/1PQR4/6Pq/P3PP2/2R3K1 b - - 0 1[0m
+[33m[stage-5] [0m[94m4/4 RUN Generate Chess Move for Position: r1b2rk1/ppbn1ppp/4p3/1QP4q/3P4/N4N2/5PPP/R1B2RK1 w - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
-[33m[stage-5] [0m[92m✓ Received valid move h3f1[0m
+[33m[stage-5] [0m[92m✓ Received valid move g1h1[0m
 [33m[stage-5] [0m[92mRequest completed successfully[0m
 [33m[stage-5] [0m[92mTest passed.[0m
 [33m[stage-5] [0m[36mTerminating program[0m
@@ -28,20 +28,20 @@ Debug = true
 
 [33m[stage-4] [0m[94mRunning tests for Stage #4: a04[0m
 [33m[stage-4] [0m[94m$ ./script.sh[0m
-[33m[stage-4] [0m[94m1/3 RUN Generate Chess Move for Position: 2r1nrk1/p2q1ppp/bp1p4/n1pPp3/P1P1P3/2PBB1N1/4QPPP/R4RK1 w - -[0m
+[33m[stage-4] [0m[94m1/3 RUN Generate Chess Move for Position: r3r1k1/ppqb1ppp/8/4p1NQ/8/2P5/PP3PPP/R3R1K1 b - -[0m
 [33m[stage-4] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-4] [0m[92m✓ Received status code 200[0m
-[33m[stage-4] [0m[92m✓ Received valid move g1h1[0m
+[33m[stage-4] [0m[92m✓ Received valid move g8f8[0m
 [33m[stage-4] [0m[92mRequest completed successfully[0m
-[33m[stage-4] [0m[94m2/3 RUN Generate Chess Move for Position: 1k1r4/pp1b1R2/3q2pp/4p3/2B5/4Q3/PPP2B2/2K5 b - -[0m
+[33m[stage-4] [0m[94m2/3 RUN Generate Chess Move for Position: 3r1k2/4npp1/1ppr3p/p6P/P2PPPP1/1NR5/5K2/2R5 w - -[0m
 [33m[stage-4] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-4] [0m[92m✓ Received status code 200[0m
-[33m[stage-4] [0m[92m✓ Received valid move b8c7[0m
+[33m[stage-4] [0m[92m✓ Received valid move f2e1[0m
 [33m[stage-4] [0m[92mRequest completed successfully[0m
-[33m[stage-4] [0m[94m3/3 RUN Generate Chess Move for Position: 3rr3/2pq2pk/p2p1pnp/8/2QBPP2/1P6/P5PP/4RRK1 b - -[0m
+[33m[stage-4] [0m[94m3/3 RUN Generate Chess Move for Position: 1nk1r1r1/pp2n1pp/4p3/q2pPp1N/b1pP1P2/B1P2R2/2P1B1PP/R2Q2K1 w - -[0m
 [33m[stage-4] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-4] [0m[92m✓ Received status code 200[0m
-[33m[stage-4] [0m[92m✓ Received valid move h7h8[0m
+[33m[stage-4] [0m[92m✓ Received valid move g1f1[0m
 [33m[stage-4] [0m[92mRequest completed successfully[0m
 [33m[stage-4] [0m[92mTest passed.[0m
 [33m[stage-4] [0m[36mTerminating program[0m

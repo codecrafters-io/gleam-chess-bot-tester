@@ -2,7 +2,7 @@ Debug = true
 
 [33m[stage-5] [0m[94mRunning tests for Stage #5: a05[0m
 [33m[stage-5] [0m[94m$ ./script.sh[0m
-[33m[stage-5] [0m[94m1/4 RUN Generate Chess Move for Position: 3R1rk1/8/5Qpp/2p5/2P1p1q1/P3P3/1P2PK2/8 b - - 0 1[0m
+[33m[stage-5] [0m[94m1/4 RUN Generate Chess Move for Position: 2r3k1/q4ppp/p3p3/pnNp4/2rP4/2P2P2/4R1PP/2R1Q1K1 b - - 0 1[0m
 [33m[stage-5] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-5] [0m[92m✓ Received status code 200[0m
 [33m[stage-5] [0m[91mAssertion failed: Invalid move received: e9e10[0m
