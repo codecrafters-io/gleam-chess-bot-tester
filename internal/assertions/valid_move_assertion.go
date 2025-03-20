@@ -29,9 +29,16 @@ func (a *ValidMoveAssertion) Run(response *http.Response, logger *logger.Logger)
 }
 
 func moveIsValid(fenStr string, move string) bool {
-	fen, err := chess.FEN(fenStr)
+	var fen func(*chess.Game)
+	var err error
+
+	fen, err = chess.FEN(fenStr)
 	if err != nil {
-		return false
+		fenStr += " 0 1"
+		fen, err = chess.FEN(fenStr)
+		if err != nil {
+			return false
+		}
 	}
 
 	game := chess.NewGame(fen)

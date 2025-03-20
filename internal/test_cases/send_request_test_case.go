@@ -43,7 +43,7 @@ func (tc *SendRequestTestCase) Run(logger *logger.Logger) error {
 	if duration > 5*time.Second {
 		return fmt.Errorf("request took too long to complete: %s", duration)
 	}
-	logger.Debugf("Request completed in %s", duration)
+	// logger.Debugf("Request completed in %s", duration)
 
 	// Run the assertion
 	if tc.Assertion != nil {

@@ -3,6 +3,7 @@ package internal
 import (
 	chess_bot_executable "github.com/codecrafters-io/gleam-chess-bot-tester/internal/chess-bot-executable"
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/test_cases"
+	"github.com/codecrafters-io/tester-utils/random"
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
 )
 
@@ -41,11 +42,12 @@ func test4(stageHarness *test_case_harness.TestCaseHarness) error {
 		"r2qnrnk/p2b2b1/1p1p2pp/2pPpp2/1PP1P3/PRNBB3/3QNPPP/5RK1 w - -",
 	}
 
-	for i, FEN := range FENs {
+	POSITIONS := 3
+	for i, FEN := range random.RandomElementsFromArray(FENs, POSITIONS) {
 		if !checkFEN(FEN) {
 			continue
 		}
-		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, len(FENs), FEN)
+		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, POSITIONS, FEN)
 
 		test_case := test_cases.GetMoveTestCase{
 			FEN:                        FEN,

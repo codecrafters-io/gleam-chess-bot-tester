@@ -174,11 +174,12 @@ func test5(stageHarness *test_case_harness.TestCaseHarness) error {
 		"qn1kr2r/1pRbb3/pP5p/P2pP1pP/3N1pQ1/3B4/3B1PP1/R5K1 w - - 0 1",
 	}
 
-	for i, FEN := range random.RandomElementsFromArray(FENs, 4) {
+	POSITIONS := 4
+	for i, FEN := range random.RandomElementsFromArray(FENs, POSITIONS) {
 		if !checkFEN(FEN) {
 			continue
 		}
-		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, len(FENs), FEN)
+		stageHarness.Logger.Infof("%d/%d RUN Generate Chess Move for Position: %s", i+1, POSITIONS, FEN)
 
 		testCase := test_cases.GetMoveTestCase{
 			FEN:                        FEN,

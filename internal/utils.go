@@ -71,5 +71,9 @@ func makeMove(fenStr string) (string, error) {
 
 func checkFEN(FEN string) bool {
 	_, err := chess.FEN(FEN)
+	if err != nil {
+		FEN += " 0 1"
+		_, err = chess.FEN(FEN)
+	}
 	return err == nil
 }
