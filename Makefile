@@ -31,8 +31,8 @@ test_bot: build
 	CODECRAFTERS_TEST_CASES_JSON="[ \
 		{\"slug\":\"a01\",\"tester_log_prefix\":\"stage_1\",\"title\":\"Stage #1: Bind to port 8000\"}, \
 		{\"slug\":\"a02\",\"tester_log_prefix\":\"stage_2\",\"title\":\"Stage #2: Test endpoint returns 200\"}, \
-		{\"slug\":\"a03\",\"tester_log_prefix\":\"stage_3\",\"title\":\"Stage #3: Single valid move\"}, \
-		{\"slug\":\"a04\",\"tester_log_prefix\":\"stage_4\",\"title\":\"Stage #4: Bratko-Kopek tests\"}, \
-		{\"slug\":\"a05\",\"tester_log_prefix\":\"stage_5\",\"title\":\"Stage #5: Win @ Chess\"} \
+		{\"slug\":\"a03\",\"tester_log_prefix\":\"stage_3\",\"title\":\"#3: Respond with an opening\"}, \
+		{\"slug\":\"a04\",\"tester_log_prefix\":\"stage_4\",\"title\":\"Stage #4: Bratko-Kopek test\"}, \
+		{\"slug\":\"a05\",\"tester_log_prefix\":\"stage_5\",\"title\":\"Stage #5: Win at Chess\"} \
 	]" \
 	$(shell pwd)/dist/main.out
