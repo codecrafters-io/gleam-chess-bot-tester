@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"path"
+	"strconv"
 	"strings"
 
 	"github.com/codecrafters-io/tester-utils/executable"
@@ -38,51 +39,65 @@ func NewChessBotExecutable(stageHarness *test_case_harness.TestCaseHarness) *Che
 }
 
 func (b *ChessBotExecutable) cleanupCgroup() error {
-	return os.RemoveAll(b.cgroupPath)
+	b.logger.Debugf("Cleaning up cgroup at %s", b.cgroupPath)
+	err := os.RemoveAll(b.cgroupPath)
+	if err != nil {
+		b.logger.Errorf("Error removing cgroup: %v", err)
+		return err
+	}
+	return nil
 }
 
 func (b *ChessBotExecutable) setupCgroupConstraints() error {
-	pid := b.executable.Process.Pid
-	if err := os.WriteFile(
-		path.Join(b.cgroupPath, "memory/cgroup.procs"),
-		fmt.Appendf(nil, "%d", pid),
-		0644,
-	); err != nil {
-		return fmt.Errorf("failed to add process to memory cgroup: %v", err)
+	if b.executable == nil || b.executable.Process == nil {
+		return fmt.Errorf("executable or process is nil")
 	}
-	if err := os.WriteFile(
-		path.Join(b.cgroupPath, "cpu/cgroup.procs"),
-		fmt.Appendf(nil, "%d", pid),
-		0644,
-	); err != nil {
-		return fmt.Errorf("failed to add process to CPU cgroup: %v", err)
+
+	pid := b.executable.Process.Pid
+	pidStr := strconv.Itoa(pid) // Convert pid to string
+
+	memoryProcsPath := path.Join(b.cgroupPath, "memory", "cgroup.procs")
+	cpuProcsPath := path.Join(b.cgroupPath, "cpu", "cgroup.procs")
+
+	b.logger.Debugf("Adding process %d to memory cgroup: %s", pid, memoryProcsPath)
+	if err := os.WriteFile(memoryProcsPath, []byte(pidStr), 0644); err != nil {
+		return fmt.Errorf("failed to add process to memory cgroup (%s): %v", memoryProcsPath, err)
+	}
+
+	b.logger.Debugf("Adding process %d to CPU cgroup: %s", pid, cpuProcsPath)
+	if err := os.WriteFile(cpuProcsPath, []byte(pidStr), 0644); err != nil {
+		return fmt.Errorf("failed to add process to CPU cgroup (%s): %v", cpuProcsPath, err)
 	}
 
 	return nil
 }
 
 func (b *ChessBotExecutable) setupCgroup() error {
-	if err := os.MkdirAll(path.Join(b.cgroupPath, "memory"), 0755); err != nil {
-		return fmt.Errorf("failed to create memory cgroup: %v", err)
-	}
-	if err := os.MkdirAll(path.Join(b.cgroupPath, "cpu"), 0755); err != nil {
-		return fmt.Errorf("failed to create cpu cgroup: %v", err)
+	b.logger.Debugf("Setting up cgroup at %s", b.cgroupPath)
+
+	memoryPath := path.Join(b.cgroupPath, "memory")
+	cpuPath := path.Join(b.cgroupPath, "cpu")
+
+	b.logger.Debugf("Creating memory cgroup directory: %s", memoryPath)
+	if err := os.MkdirAll(memoryPath, 0755); err != nil {
+		return fmt.Errorf("failed to create memory cgroup (%s): %v", memoryPath, err)
 	}
 
-	if err := os.WriteFile(
-		path.Join(b.cgroupPath, "memory/memory.limit_in_bytes"),
-		[]byte("268435456"),
-		0644,
-	); err != nil {
-		return fmt.Errorf("failed to set memory limit: %v", err)
+	b.logger.Debugf("Creating cpu cgroup directory: %s", cpuPath)
+	if err := os.MkdirAll(cpuPath, 0755); err != nil {
+		return fmt.Errorf("failed to create cpu cgroup (%s): %v", cpuPath, err)
 	}
 
-	if err := os.WriteFile(
-		path.Join(b.cgroupPath, "cpu/cpu.cfs_quota_us"),
-		[]byte("50000"),
-		0644,
-	); err != nil {
-		return fmt.Errorf("failed to set CPU quota: %v", err)
+	memoryLimitPath := path.Join(b.cgroupPath, "memory", "memory.limit_in_bytes")
+	b.logger.Debugf("Setting memory limit to 268435456 in %s", memoryLimitPath)
+	if err := os.WriteFile(memoryLimitPath, []byte("268435456"), 0644); err != nil {
+		return fmt.Errorf("failed to set memory limit (%s): %v", memoryLimitPath, err)
+	}
+
+	cpuQuotaPath := path.Join(b.cgroupPath, "cpu", "cpu.cfs_quota_us")
+	b.logger.Debugf("Setting CPU quota to 50000 in %s", cpuQuotaPath)
+	if err := os.WriteFile(cpuQuotaPath, []byte("50000"), 0644); err != nil {
+		return fmt.Errorf("failed to set CPU quota (%s): %v", cpuQuotaPath, err)
 	}
 
 	return nil
