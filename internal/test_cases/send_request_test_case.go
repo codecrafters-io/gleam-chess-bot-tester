@@ -48,6 +48,6 @@ func (tc *SendRequestTestCase) Run(logger *logger.Logger) error {
 		}
 	}
 
-	logger.Successf("Request completed successfully")
+	logger.Debugf("Request completed successfully")
 	return nil
 }
