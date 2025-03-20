@@ -9,12 +9,6 @@ import (
 	"github.com/codecrafters-io/tester-utils/logger"
 )
 
-const PROTOCOL = "http"
-const HOST = "localhost"
-const PORT = "8000"
-const ENDPOINT = "/move"
-const ADDRESS = PROTOCOL + "://" + HOST + ":" + PORT + ENDPOINT
-
 type SendRequestTestCase struct {
 	Request   *http.Request
 	Assertion []assertions.Assertion

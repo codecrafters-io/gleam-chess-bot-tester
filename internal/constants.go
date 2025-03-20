@@ -1,5 +1,11 @@
 package internal
 
+const PROTOCOL = "http"
+const HOST = "localhost"
+const PORT = "8000"
+const ENDPOINT = "/move"
+const ADDRESS = PROTOCOL + "://" + HOST + ":" + PORT + ENDPOINT
+
 // Bratko-Kopek tests
 // https://www.chessprogramming.org/Bratko-Kopec_Test
 var BratkoKopekFENs = []string{
