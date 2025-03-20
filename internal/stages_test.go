@@ -1,18 +1,28 @@
 package internal
 
 import (
+	"os"
 	"testing"
 
 	tester_utils_testing "github.com/codecrafters-io/tester-utils/testing"
 )
 
 func TestStages(t *testing.T) {
+	os.Setenv("CODECRAFTERS_RANDOM_SEED", "1234567890")
+
 	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
-		"literal_character": {
-			UntilStageSlug:      "init",
-			CodePath:            "./test_helpers/scenarios/init/failure",
+		"success": {
+			UntilStageSlug:      "a05",
+			CodePath:            "./test_helpers/scenarios/test_bot",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
+		"invalid_move": {
+			UntilStageSlug:      "a05",
+			CodePath:            "./test_helpers/scenarios/failure_bot",
 			ExpectedExitCode:    1,
-			StdoutFixturePath:   "./test_helpers/fixtures/init/failure",
+			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/failure",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 	}
