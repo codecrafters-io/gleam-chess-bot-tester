@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/assertions"
+	"github.com/codecrafters-io/tester-utils/logger"
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
 )
 
@@ -28,7 +29,7 @@ func getTurn(fenStr string) string {
 	return strings.TrimSpace(parts[1])
 }
 
-func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) error {
+func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness, logger *logger.Logger) error {
 	requestBody := map[string]any{
 		"fen":          tc.FEN,
 		"turn":         getTurn(tc.FEN),
@@ -55,5 +56,5 @@ func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness) 
 		Assertion: allAssertions,
 	}
 
-	return test_case.Run(stageHarness.Logger)
+	return test_case.Run(logger)
 }
