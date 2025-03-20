@@ -12,6 +12,8 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 		return err
 	}
 
+	logger := stageHarness.Logger
+
 	// Opening position
 	FEN := "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
@@ -19,7 +21,7 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 		FEN:                        FEN,
 		AssertGeneratedMoveIsValid: true,
 	}
-	if err := test_case.Run(stageHarness); err != nil {
+	if err := test_case.Run(stageHarness, logger); err != nil {
 		return err
 	}
 
