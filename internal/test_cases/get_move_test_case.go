@@ -28,9 +28,9 @@ func getTurn(fenStr string) string {
 	parts := strings.Split(fenStr, " ")
 	turn := strings.TrimSpace(parts[1])
 	if turn == "w" {
-		return "White"
+		return "white"
 	}
-	return "Black"
+	return "black"
 }
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness, logger *logger.Logger) error {
