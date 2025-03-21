@@ -26,7 +26,11 @@ type GetMoveTestCase struct {
 // Parsing FENs is a no-go for those test cases
 func getTurn(fenStr string) string {
 	parts := strings.Split(fenStr, " ")
-	return strings.TrimSpace(parts[1])
+	turn := strings.TrimSpace(parts[1])
+	if turn == "w" {
+		return "White"
+	}
+	return "Black"
 }
 
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness, logger *logger.Logger) error {
