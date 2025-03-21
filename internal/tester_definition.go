@@ -16,10 +16,6 @@ var testerDefinition = tester_definition.TesterDefinition{
 			Slug:     "anti-cheat-2",
 			TestFunc: antiCheatDeps,
 		},
-		{
-			Slug:     "anti-cheat-3",
-			TestFunc: antiCheatFFI, // TODO: Remove FFI, might be a problem
-		},
 	},
 	ExecutableFileName: "your_program.sh",
 	TestCases: []tester_definition.TestCase{
