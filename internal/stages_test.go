@@ -12,14 +12,14 @@ func TestStages(t *testing.T) {
 
 	testCases := map[string]tester_utils_testing.TesterOutputTestCase{
 		"success": {
-			UntilStageSlug:      "a04",
+			UntilStageSlug:      "zz5",
 			CodePath:            "./test_helpers/scenarios/test_bot",
 			ExpectedExitCode:    0,
 			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/success",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 		"invalid_move": {
-			UntilStageSlug:      "a04",
+			UntilStageSlug:      "zz5",
 			CodePath:            "./test_helpers/scenarios/failure_bot",
 			ExpectedExitCode:    1,
 			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/failure",

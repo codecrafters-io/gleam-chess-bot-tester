@@ -1,6 +1,6 @@
 Debug = true
 
-[33m[stage-4] [0m[94mRunning tests for Stage #4: a04[0m
+[33m[stage-4] [0m[94mRunning tests for Stage #4: zz5[0m
 [33m[stage-4] [0m[94m$ ./your_program.sh[0m
 [33m[stage-4] [board-1] [0m[94mPosition: 2r3k1/q4ppp/p3p3/pnNp4/2rP4/2P2P2/4R1PP/2R1Q1K1 b - - 0 1[0m
 [33m[stage-4] [board-1] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
