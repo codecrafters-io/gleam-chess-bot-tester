@@ -1,6 +1,6 @@
 Debug = true
 
-[33m[stage-4] [0m[94mRunning tests for Stage #4: a04[0m
+[33m[stage-4] [0m[94mRunning tests for Stage #4: zz5[0m
 [33m[stage-4] [0m[94m$ ./your_program.sh[0m
 [33m[stage-4] [board-1] [0m[94mPosition: 2r3k1/q4ppp/p3p3/pnNp4/2rP4/2P2P2/4R1PP/2R1Q1K1 b - - 0 1[0m
 [33m[stage-4] [board-1] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
@@ -30,7 +30,7 @@ Debug = true
 [33m[stage-4] [0m[36mTerminating program[0m
 [33m[stage-4] [0m[36mProgram terminated successfully[0m
 
-[33m[stage-3] [0m[94mRunning tests for Stage #3: a03[0m
+[33m[stage-3] [0m[94mRunning tests for Stage #3: wd4[0m
 [33m[stage-3] [0m[94m$ ./your_program.sh[0m
 [33m[stage-3] [board-1] [0m[94mPosition: r3r1k1/ppqb1ppp/8/4p1NQ/8/2P5/PP3PPP/R3R1K1 b - -[0m
 [33m[stage-3] [board-1] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
@@ -54,7 +54,7 @@ Debug = true
 [33m[stage-3] [0m[36mTerminating program[0m
 [33m[stage-3] [0m[36mProgram terminated successfully[0m
 
-[33m[stage-2] [0m[94mRunning tests for Stage #2: a02[0m
+[33m[stage-2] [0m[94mRunning tests for Stage #2: xt9[0m
 [33m[stage-2] [0m[94m$ ./your_program.sh[0m
 [33m[stage-2] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-2] [0m[92m✓ Received status code 200[0m
@@ -64,7 +64,7 @@ Debug = true
 [33m[stage-2] [0m[36mTerminating program[0m
 [33m[stage-2] [0m[36mProgram terminated successfully[0m
 
-[33m[stage-1] [0m[94mRunning tests for Stage #1: a01[0m
+[33m[stage-1] [0m[94mRunning tests for Stage #1: si0[0m
 [33m[stage-1] [0m[94m$ ./your_program.sh[0m
 [33m[stage-1] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
 [33m[stage-1] [0m[92m✓ Received status code 200[0m
