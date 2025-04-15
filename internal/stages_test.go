@@ -19,10 +19,17 @@ func TestStages(t *testing.T) {
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 		"invalid_move": {
-			UntilStageSlug:      "gd8",
+			UntilStageSlug:      "zz5",
 			CodePath:            "./test_helpers/scenarios/failure_bot",
 			ExpectedExitCode:    1,
 			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/failure",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
+		"invalid_repo_state": {
+			StageSlugs:          []string{"si0"},
+			CodePath:            "./test_helpers/scenarios/failure_bot",
+			ExpectedExitCode:    1,
+			StdoutFixturePath:   "./test_helpers/fixtures/invalid_repo_state/failure",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
 	}
