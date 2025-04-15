@@ -20,7 +20,7 @@ func test1(stageHarness *test_case_harness.TestCaseHarness) error {
 	if err != nil {
 		return err
 	}
-	if !checkForEitherExampleOrEntryMd(files) {
+	if !checkForEitherExampleMdOrEntryMd(files) {
 		return fmt.Errorf("Expected to find either ENTRY.md or example.ENTRY.md in the executable directory, but found neither")
 	}
 
