@@ -1,5 +1,12 @@
 Debug = true
 
+[33m[stage-5] [0m[94mRunning tests for Stage #5: gd8[0m
+[33m[stage-5] [0m[94m$ ./your_program.sh[0m
+[33m[stage-5] [0m[92mENTRY.md file found! You're all set to participate in the Gleam Chess Tournament.[0m
+[33m[stage-5] [0m[92mTest passed.[0m
+[33m[stage-5] [0m[36mTerminating program[0m
+[33m[stage-5] [0m[36mProgram terminated successfully[0m
+
 [33m[stage-4] [0m[94mRunning tests for Stage #4: zz5[0m
 [33m[stage-4] [0m[94m$ ./your_program.sh[0m
 [33m[stage-4] [board-1] [0m[94mPosition: 2r3k1/q4ppp/p3p3/pnNp4/2rP4/2P2P2/4R1PP/2R1Q1K1 b - - 0 1[0m

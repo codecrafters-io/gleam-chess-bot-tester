@@ -1,0 +1,8 @@
+Debug = true
+
+[33m[stage-1] [0m[94mRunning tests for Stage #1: si0[0m
+[33m[stage-1] [0m[94m$ ./your_program.sh[0m
+[33m[stage-1] [0m[91mExpected to find either ENTRY.md or example.ENTRY.md in the executable directory, but found neither[0m
+[33m[stage-1] [0m[91mTest failed[0m
+[33m[stage-1] [0m[36mTerminating program[0m
+[33m[stage-1] [0m[36mProgram terminated successfully[0m
