@@ -37,5 +37,10 @@ var testerDefinition = tester_definition.TesterDefinition{
 			TestFunc: test4,
 			Timeout:  20 * time.Second,
 		},
+		{
+			Slug:     "gd8",
+			TestFunc: test5,
+			Timeout:  20 * time.Second,
+		},
 	},
 }
