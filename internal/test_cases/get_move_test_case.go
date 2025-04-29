@@ -24,7 +24,7 @@ type GetMoveTestCase struct {
 
 // For invalid FENs, we still need to parse the turn
 // Parsing FENs is a no-go for those test cases
-func getTurn(fenStr string) string {
+func GetTurnFromFEN(fenStr string) string {
 	parts := strings.Split(fenStr, " ")
 	turn := strings.TrimSpace(parts[1])
 	if turn == "w" {
@@ -36,7 +36,7 @@ func getTurn(fenStr string) string {
 func (tc *GetMoveTestCase) Run(stageHarness *test_case_harness.TestCaseHarness, logger *logger.Logger) error {
 	requestBody := map[string]any{
 		"fen":          tc.FEN,
-		"turn":         getTurn(tc.FEN),
+		"turn":         GetTurnFromFEN(tc.FEN),
 		"failed_moves": []string{},
 	}
 	jsonBody, err := json.Marshal(requestBody)
