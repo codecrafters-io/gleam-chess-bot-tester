@@ -17,6 +17,8 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 	// Opening position
 	FEN := "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
+	logger.UpdateSecondaryPrefix("board")
+	stageHarness.Logger.Infof("Position: %s", FEN)
 	test_case := test_cases.GetMoveTestCase{
 		FEN:                        FEN,
 		AssertGeneratedMoveIsValid: true,
@@ -24,6 +26,7 @@ func test2(stageHarness *test_case_harness.TestCaseHarness) error {
 	if err := test_case.Run(stageHarness, logger); err != nil {
 		return err
 	}
+	logger.ResetSecondaryPrefix()
 
 	return nil
 }
