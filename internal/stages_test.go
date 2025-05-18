@@ -18,6 +18,13 @@ func TestStages(t *testing.T) {
 			StdoutFixturePath:   "./test_helpers/fixtures/test_bot/success",
 			NormalizeOutputFunc: normalizeTesterOutput,
 		},
+		"success_gleam": {
+			UntilStageSlug:      "a02",
+			CodePath:            "./test_helpers/scenarios/gleam",
+			ExpectedExitCode:    0,
+			StdoutFixturePath:   "./test_helpers/fixtures/gleam/success",
+			NormalizeOutputFunc: normalizeTesterOutput,
+		},
 		"invalid_move": {
 			UntilStageSlug:      "zz5",
 			CodePath:            "./test_helpers/scenarios/failure_bot",
