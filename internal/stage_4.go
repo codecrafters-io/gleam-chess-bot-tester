@@ -28,7 +28,7 @@ func test4(stageHarness *test_case_harness.TestCaseHarness) error {
 			AssertGeneratedMoveIsValid: true,
 		}
 		logger.UpdateSecondaryPrefix(fmt.Sprintf("board-%d", i+1))
-		stageHarness.Logger.Infof("Position: %s", FEN)
+		stageHarness.Logger.Infof("$ %s", getCurlCommandForRequest(FEN))
 
 		if err := testCase.Run(stageHarness, logger); err != nil {
 			return err

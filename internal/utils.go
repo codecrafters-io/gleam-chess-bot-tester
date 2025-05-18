@@ -1,12 +1,22 @@
 package internal
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 
+	"github.com/codecrafters-io/gleam-chess-bot-tester/internal/test_cases"
 	"github.com/codecrafters-io/tester-utils/test_case_harness"
 	"github.com/corentings/chess"
 )
+
+func getCurlCommandForRequest(FEN string) string {
+	// Request type: POST
+	// URL: http://localhost:8080/move
+	// Headers: Content-Type: application/json
+	// Body: {"failed_moves": [], "fen": FEN, "turn": "white"|"black"}
+	return fmt.Sprintf(`curl -X POST http://localhost:8000/move -H "Content-Type: application/json" -d '{"failed_moves":[],"fen":"%s","turn":"%s"}'`, FEN, test_cases.GetTurnFromFEN(FEN))
+}
 
 func checkFEN(FEN string) bool {
 	_, err := chess.FEN(FEN)
