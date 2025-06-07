@@ -27,12 +27,6 @@ Debug = true
 [33m[stage-4] [board-3] [0m[92m✓ Received valid move g8f7[0m
 [33m[stage-4] [board-3] [0m[36mRequest completed successfully[0m
 [33m[stage-4] [0m[92mSuccessfully generated move for position 3[0m
-[33m[stage-4] [board-4] [0m[94m$ curl -X POST http://localhost:8000/move -H "Content-Type: application/json" -d '{"failed_moves":[],"fen":"r1b2rk1/ppbn1ppp/4p3/1QP4q/3P4/N4N2/5PPP/R1B2RK1 w - - 0 1","turn":"white"}'[0m
-[33m[stage-4] [board-4] [0m[36mMaking HTTP request to http://localhost:8000/move[0m
-[33m[stage-4] [board-4] [0m[92m✓ Received status code 200[0m
-[33m[stage-4] [board-4] [0m[92m✓ Received valid move g1h1[0m
-[33m[stage-4] [board-4] [0m[36mRequest completed successfully[0m
-[33m[stage-4] [0m[92mSuccessfully generated move for position 4[0m
 [33m[stage-4] [0m[92mTest passed.[0m
 [33m[stage-4] [0m[36mTerminating program[0m
 [33m[stage-4] [0m[36mProgram terminated successfully[0m

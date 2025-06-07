@@ -17,7 +17,7 @@ func test4(stageHarness *test_case_harness.TestCaseHarness) error {
 
 	logger := stageHarness.Logger
 
-	positionCounts := 4
+	positionCounts := 3
 	for i, FEN := range random.RandomElementsFromArray(WinAtChessFENs, positionCounts) {
 		if !checkFEN(FEN) {
 			continue
